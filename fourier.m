@@ -13,14 +13,8 @@ b = 5;
 
 coords = []; 
 for j = 1:p
-    str = string(j-1); 
-    if strlength(str) == 1
-        nam = '00' + str;
-    else
-        nam = '0' + str; %loop over all the file names, taking into account some start w 00 and some with 0
-    end
     
-    name = 'B6E8_D5_TEST_'+nam+'.csv';
+    name = num2str(j)+'.csv';
 
 
     %read file
