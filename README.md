@@ -9,6 +9,8 @@ For the smoothing in space I used the uja_shfd code from the article Encoding Co
 
 The file fourier.m in this repository is the time smoothing code that I wrote. It can be run on a set of csv files containing the coordinates at different time steps to smooth the data in time.
 
+The csv files must be set as 
+
 There are 2 user inputs in the code. p should be set to the number of time points in the data. 
   b should be set to the percent of modes you wish to take for smoothing over time. This can be used to tweak the amount of modes taken. 
   After running the code, the smoothed coordinates are output in the file coordinates.txt.  
