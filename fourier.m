@@ -142,13 +142,13 @@ legend('Original Spectrum', strcat('Take only ', num2str(b), ' percent'))
 
 
 
-%below code changes file back into coordinates excel files it was
+%below code changes file back into coordinates csv files it was
 %originally in
 
 
 for ii = 1:3:(l - 2)
     xl = ones(q, 3); %for each time point
-    na = strcat(num2str(ii-1),'.xlsx'); %so that they are numbered from 0
+    na = strcat(num2str(ii),'_smoothed.csv');
     for jj = 1:q
         xl(jj,:) = s(jj,ii:(ii+2));
     end
@@ -157,6 +157,6 @@ end
 
 
 
-% 0.xslx (smoothed mesh nodes coordinates at time frame 1)
-% 1.xlsx (smoothed mesh nodes coordinates at time frame 2)
-% 50.xlsx (smoothed mesh nodes coordinates at time frame 51)
+% 1.csv (smoothed mesh nodes coordinates at time frame 1)
+% 2.csv (smoothed mesh nodes coordinates at time frame 2)
+% 51.csv (smoothed mesh nodes coordinates at time frame 51)
