@@ -27,8 +27,6 @@ for j = 1:p
     m = readmatrix(name) ;
 
 
-    m(:,1:2) = -1.*m(:,1:2); %make x and y not negative
-
     coords = [coords m];
 
 end
@@ -147,27 +145,6 @@ legend('Original Spectrum', strcat('Take only ', num2str(b), ' percent'))
 % figure
 % plot(t, g)
 % shg
-
-%now save to txt file that can be read by fortran code and converted to a
-%vtk file
-%fortran doesnt like the long rows like I have it set up so the text file
-%is set up like (if first number is node and second is time)
-% x(1, 1) y(1,1) z(1,1)
-% x(2, 1) y(2,1) z(2,1)
-% ...all the nodes at time 1
-% x(1, 2) y(1,2) z(1,2)
-
-% csvs = [q, p, 0]; %so that the first like is the number of nodes, number of time points, and 0 for the dimension to be right (for fortran to read)
-% for ii = 1:3:(l - 2)
-%     csv = ones(q, 3); %for time point 1
-%     for jj = 1:q
-%         csv(jj,:) = s(jj,ii:(ii+2));
-%     end
-%     csvs = [csvs; csv];
-% end
-% 
-% 
-% writematrix(csvs, 'coordinates.txt')
 
 
 
