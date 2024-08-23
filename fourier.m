@@ -154,9 +154,3 @@ for ii = 1:3:(l - 2)
     end
     writematrix(xl, na)
 end
-
-
-
-% 1.csv (smoothed mesh nodes coordinates at time frame 1)
-% 2.csv (smoothed mesh nodes coordinates at time frame 2)
-% 51.csv (smoothed mesh nodes coordinates at time frame 51)
